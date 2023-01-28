@@ -31,18 +31,19 @@ public class Main {
           driver.findElement(By.className("notSigned")).click();
 
      }
-
+     @Test
+     public void test1(){
+          driver.findElement(By.xpath("//span[@class=\"text-link theme\"]")).click();
+     }
 
 //     @Test   //     התחברות
 //     public void test2(){
 //          driver.findElement(By.id("ember1835")).sendKeys("Etiatia1@gmail.com");
 //     }
-//
 //     @Test
 //     public void test3(){
 //          driver.findElement(By.id("ember1842")).sendKeys("Noel135o");
 //     }
-//
 //     @Test  // לחיצה על כפתור התחברות
 //     public void test4(){
 //          driver.findElement(By.id("ember1851")).click();
