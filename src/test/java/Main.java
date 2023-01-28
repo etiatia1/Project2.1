@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -7,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.locators.RelativeLocator.with;
@@ -23,25 +25,29 @@ public class Main {
           wait = new WebDriverWait(driver, Duration.ofSeconds(10));
           driver.get("https://buyme.co.il");
      }
-     
-     @Test
+
+     @Test   //move to asin window
      public void rightOFTest() {
           driver.findElement(By.className("notSigned")).click();
 
      }
-     @Test
-     public void test2(){
-          driver.findElement(By.id("ember1835")).sendKeys("Etiatia1@gmail.com");
-     }
-     @Test
-     public void test3(){
-          driver.findElement(By.id("ember1842")).sendKeys("Noel135o");
-     }
-     @Test
-     public void test4(){
-          driver.findElement(By.id("ember1851")).click();
-     }
 
-//     class= "ember-view ember-text-field"
+
+//     @Test   //     התחברות
+//     public void test2(){
+//          driver.findElement(By.id("ember1835")).sendKeys("Etiatia1@gmail.com");
+//     }
+//
+//     @Test
+//     public void test3(){
+//          driver.findElement(By.id("ember1842")).sendKeys("Noel135o");
+//     }
+//
+//     @Test  // לחיצה על כפתור התחברות
+//     public void test4(){
+//          driver.findElement(By.id("ember1851")).click();
+//     }
+
+
 
 }
