@@ -9,13 +9,11 @@ public class BasePage {
         public void sendKeysToElement(By locator, String text) {
             getWebElement(locator).sendKeys(text);
         }
-        public WebElement getElemet (By locator) {
-            return (WebElement) getWebElement(locator);
-        }
+//        public WebElement getElemet (By locator) {
+//            return (WebElement) getWebElement(locator);
+//        }
         private WebElement getWebElement(By locator) {
             return
             DriverSingleton.getDriverInstance().findElement(locator);
         }
-
-
     }

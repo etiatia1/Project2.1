@@ -8,24 +8,30 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class TestLogin {
+public class TestLogin extends BasePage{
     public static WebDriver driver;
-    private static WebDriverWait wait;
+//    private static WebDriverWait wait;
 
     @BeforeClass
     public static void runOnceBeforeClass() {
         System.setProperty("webdriver.chrome.driver", Constants.CHROMEDRIVER_PATH);
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.get("https://buyme.co.il");
-    }
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        driver.get("https://buyme.co.il");
+
+        }
+
 
     @Test   //move to sigh window
     public void rightOFTest() {
-        driver.findElement(By.className("notSigned")).click();
-        driver.findElement(By.id("ember1835")).sendKeys("Etiatia1@gmail.com");//     התחברות
-        driver.findElement(By.id("ember1842")).sendKeys("Noel135o");
-        driver.findElement(By.id("ember1851")).click();// לחיצה על כפתור התחברות
+//        driver.findElement(By.className("notSigned")).click();
+//        driver.findElement(By.id("ember1835")).sendKeys("Etiatia1@gmail.com");//     התחברות
+//        driver.findElement(By.id("ember1842")).sendKeys("Noel135o");
+//        driver.findElement(By.id("ember1851")).click();// לחיצה על כפתור התחברות
+        clickElement(By.className("notSigned"));
+        sendKeysToElement(By.id("ember1835"),"Etiatia1@gmail.com");
+        sendKeysToElement(By.id("ember1842"),"Noel135o");
+        clickElement(By.id("ember1851"));
      }
 }
