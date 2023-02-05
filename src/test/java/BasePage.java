@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class BasePage {
@@ -13,7 +14,10 @@ public class BasePage {
 //            return (WebElement) getWebElement(locator);
 //        }
         private WebElement getWebElement(By locator) {
+            WebDriver driver=DriverSingleton.getDriverInstance();
             return
-            DriverSingleton.getDriverInstance().findElement(locator);
+                    driver.findElement(locator);
+
+//            DriverSingleton.getDriverInstance().findElement(locator);
         }
     }
