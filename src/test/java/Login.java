@@ -5,7 +5,11 @@ public class Login extends BasePage{
 
     private WebDriver driver;
 
-    public Login (){this.driver =DriverSingleton.getDriverInstance() ; }
+
+
+//    public Login (){this.driver =DriverSingleton.getDriverInstance() ;
+
+//    }
 //    private static WebDriverWait wait;
 
 
@@ -23,6 +27,7 @@ public class Login extends BasePage{
         sendKeysToElement(By.id("ember1835"),"Etiatia1@gmail.com");
         sendKeysToElement(By.id("ember1842"),"Noel135o");
         clickElement(By.id("ember1852"));
+
 
     }
 }

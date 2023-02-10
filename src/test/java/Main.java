@@ -7,8 +7,9 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-    public static WebDriver driver;
-    private static WebDriverWait wait;
+    WebDriver driver=DriverSingleton.getDriverInstance();
+    //    public static WebDriver driver;
+//    private static WebDriverWait wait;
     @BeforeTest
     public static void runOnceBeforeClass() {
         System.setProperty("webdriver.chrome.driver", Constants.CHROMEDRIVER_PATH);
@@ -25,6 +26,9 @@ public class Main {
     public void test_login(){
         Login login=new Login();
         login.login();
+        System.out.println(driver.getCurrentUrl());
+
+
     }
     @Test
     public void test_findgift() throws InterruptedException {
